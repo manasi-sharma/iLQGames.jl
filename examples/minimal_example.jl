@@ -32,5 +32,4 @@ converged, trajectory, strategies = solve(g, solver, x0)
 # for visualization, we need to state which state indices correspond to px and py
 position_indices = tuple(SVector(1,2))
 #plot_traj(trajectory, position_indices, [:red, :green], player_inputs)
-@animated(plot_traj(trajectory, g, [:red, :green], player_inputs),
-          1:game_horizon, "C:\\Users\\MA32631\\OneDrive - MIT Lincoln Laboratory\\Documents\\EDGES\\minimal_example.gif")
+@animated(plot_traj(trajectory, g, [:red, :green], player_inputs), 1:game_horizon, "C:\\Users\\MA32631\\OneDrive - MIT Lincoln Laboratory\\Documents\\EDGES\\minimal_example.gif")
