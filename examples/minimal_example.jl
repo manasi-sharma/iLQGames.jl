@@ -9,6 +9,7 @@ struct Unicycle <: ControlSystem{ΔT,nx,nu} end
 # state: (px, py, phi, v)
 dx(cs::Unicycle, x, u, t) = SVector(x[4]cos(x[3]), x[4]sin(x[3]), u[1], u[2])
 dynamics = Unicycle()
+xyindex(::Unicycle) = SVector(1, 2)
 
 # player-1 wants the unicycle to stay close to the origin,
 # player-2 wants to keep close to 1 m/s
